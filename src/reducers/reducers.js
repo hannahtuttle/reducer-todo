@@ -22,6 +22,8 @@ export const initialState =  {
           return item;
         }
       })};
+      case 'UPDATE-LIST':
+        return {...state, list: state.list.filter(item => !item.completed)};
     default:
       return state;
   }
