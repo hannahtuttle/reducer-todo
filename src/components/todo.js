@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ToDo = ({item}) => {
+const ToDo = ({item, dispatch}) => {
+    
    
         return(
-        <div className='' 
-        // onClick={() => this.props.toggleTask(this.props.item.id)}>
-        >
+        <div className={item.completed ? 'completed': ''} 
+        onClick={() => dispatch({type: 'TOGGLE-LIST', payload: item.id})}>
         <p>{item.item}</p>
         </div>
         )

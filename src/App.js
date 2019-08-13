@@ -9,9 +9,11 @@ function App() {
 
   const [state, dispatch] = useReducer(reducer, initialState)
 
+ 
+
   return (
     <div className="App">
-    <TodoList state={state}/>
+    <TodoList state={state} dispatch={dispatch}/>
     <ToDoForm dispatch={dispatch}/>
     </div>
   );
